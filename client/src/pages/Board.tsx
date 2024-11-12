@@ -17,7 +17,7 @@ const Board = () => {
   const [loginCheck, setLoginCheck] = useState(false);
 
   const checkLogin = () => {
-    if(auth.loggedIn()) {
+    if(auth.isAuthenticated()) {
       setLoginCheck(true);
     }
   };
@@ -74,7 +74,7 @@ const Board = () => {
               {boardStates.map((status) => {
                 const filteredTickets = tickets.filter(ticket => ticket.status === status);
                 return (
-                  <Swimlane 
+                  <Swimlane
                     title={status} 
                     key={status} 
                     tickets={filteredTickets} 

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { ticketRouter } from './ticket-routes';
-import { userRouter } from './user-routes';
+import { ticketRouter } from './api/ticket-routes.js'; // Ensure this path is correct
+import { userRouter } from './api/user-routes.js';
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = Router();
